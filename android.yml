@@ -1,0 +1,16 @@
+name: Build FARO Android APK
+
+on:
+workflow_dispatch:
+
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+
+  - name: Check repository contents
+    run: |
+      echo "FARO build environment is ready"
+      echo "Android source code must be added before an APK can be built."
